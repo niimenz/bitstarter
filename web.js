@@ -1,12 +1,12 @@
+#!/usr/bin/env node
+var fs = require('fs');
 var express = require('express');
 
 var app = express.createServer(express.logger());
 
 var string_buff = fs.readFileSync("index.html");
 
-var buff_content = new Buffer(string_buff, "utf-8");
-
-var buff_output = but.toString();
+var buff_output = buf.toString(string_buff);
 app.get('/', function(request, response) {
   response.send(buff_output);
 });
